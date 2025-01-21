@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+ font-family: "Poppins", serif;
+}
+ .div1
+ {
+     text-align: center;
+     margin-top: 40px;
+
+ }
+ .service-box-meet
+ {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
+  margin-top: 30px;
+  
+ }
+ .box-meet
+{
+
+ padding: 0px;
+ margin: auto;
+ text-align: center;
+ border-radius: 1px;
+ background: #fff;
+ box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+ cursor: pointer;
+ width: 290px;
+ height: 374px;
+ border-radius: 6px;
+}
+
+.box-meet:hover{
+ box-shadow:  0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.box-meet img
+{
+width: 290px;
+height: 290px;
+border-radius: 6px 6px 0px 0px;
+/* object-fit: contain contain; */
+}
+.box-bg-meet p span
+{
+color: #66C231;
+font-size: 14px;
+font-family: "Poppins", serif;
+}
+.box-bg-meet p{
+font-family: "Poppins", serif;
+}
+
+.box-bg-meet h4{
+font-family: "Poppins", serif;
+}
+
+p{
+font-family: "Poppins", serif;
+}
+.btn5
+{
+position: relative;
+padding: 14px 25px;
+font-size: 14px;
+cursor: pointer;
+border: 1px solid;
+outline: 0;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+margin-top: 20px;
+text-decoration: none;
+z-index: 1;
+border-radius: 6px;
+color:white;
+border: 1px solid #66C231;
+background-color: #66C231;
+height: 40px;
+width: 190px;
+}
+
+
+.btn5:hover
+{
+background-color: white;
+color: #66C231;
+transition: .4s ease-in-out;
+}
+.bxs-right-arrow-circle
+{
+font-size: 20px;
+}
+
+.meet{
+font-family: "Poppins", serif;
+font-weight: 400px;
+}
+
+.info{
+width: 790px;
+margin-top: 40px;
+margin-left: 420px;
+}
+
+.img1{
+    height: 290px;
+    width: 290px;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 65px;
+}
+ 
+.tap{
+    text-align: center;
+    margin-top: 3px;
+}
+.tap button{
+    height: 40px;
+    width: 150px;
+    color: white;
+    background-color: #308E05;
+    border-radius: 6px;
+    border: 1px solid;
+    
+}
+
+.tap button:hover{
+    background-color: white;
+    color: #308E05;
+    transition: 0.4s;
+  
+}
+.summarybox {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 0px; 
+    padding: 20px;
+    margin-left: 80px;
+    margin-top: 20PX;
+   
+    
+  }
+  .colorbg{
+    background-color:rgba(102, 194, 49, .2);
+    width: auto;
+    height: 260px;
+  }

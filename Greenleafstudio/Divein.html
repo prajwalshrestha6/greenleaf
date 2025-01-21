@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenLeafStudio</title>
+    <link rel="stylesheet" href="/form.css">
+    <link rel="stylesheet" href="/Main.css">
+    <link rel="stylesheet" href="/Header.css">
+    <link rel="stylesheet" href="/Footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class=" container">
+        <a href="/"><img src="/log1.png" alt="" class="logo"/></a>
+        <!-- <i class='bx bx-menu' id="menu-icon"></i>  -->
+        <ul>
+            <li><a href="/" class="active">Home</a></li>
+            <li> <a href="/About.html">About</a></li>
+            <li> <a href="/Services.html">Service</a></li>
+            <li> <a href="/contact.html">Contact</a></li>
+            <li><a href="/contact.html" class="last-text-navbar"><button class="btn"><i class='bx bx-pencil'></i> &nbsp;Dive in</button></a></li>
+        </ul>
+    </nav>
+   <div class="container_bg">
+    <form   action="https://api.web3forms.com/submit" method="POST" id="form">
+        <input type="hidden" name="access_key" value="58ea59b1-a8eb-495c-8206-be67ff9ccf5c">
+        <label for="username" class="username">Full Name:</label><br>
+        <input type="text" name="username" id="username" placeholder="Enter Your Full Name" required><br>
+        <label for="email" class="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Youremail@gmail.com" required><br>
+        <label for="phonenumber" class="phonenumber">Phone Number:</label><br>
+        <input type="number" id="phonenumber" name="phonenumber" required><br>
+        <button id="button"  type="submit">Submit &nbsp; <i class='bx bx-right-arrow-circle' ></i></button>
+        <div id="result"></div>
+        </form>
+        
+   </div>
+   <div class="footer-background">
+
+    <div class="container Second-container">
+      <div>
+          <h4>green leaf studio</h4>
+          <ul>
+              <li><p><i class='bx bx-current-location'></i>kathmandu, Nepal</p></li>
+              <li><p><i class='bx bxs-phone'></i>+977 984117180</p></li>
+              <li><p><i class='bx bxl-gmail' ></i>mail@greenleafstudio</p></li>
+          </ul>
+      </div>
+      <div>
+          <h3>company</h3>
+          <ul>
+              <li>Home</li>
+              <li>About us</li>
+              <li>Services</li>
+              <li>Contact Us</li>
+          </ul>
+      </div>
+      <div>
+          <h3>What We Do</h3>
+          <ul>
+              <li><p>website development</p></li>
+              <li><p>Graphic designing</p></li>
+              <li><p>Social media marketing</p></li>
+              <li><p>Video Editing</p></li>
+          </ul>
+      </div>
+      <div class="link-hover">
+          <h3>Connect With Us</h3>
+          <ul>
+              <li>Facebook</li>
+              <li>Instgram</li>
+              <li>Twitter x</li>
+              <li>Linkedin</li>
+              <!-- {/* location :<i class='bx bx-current-location'></i>
+              phone: <i class='bx bxs-phone'></i>
+              mail:<i class='bx bxl-gmail' ></i>
+              facebook: <i class='bx bxl-facebook' ></i>
+              instgram: <i class='bx bxl-instagram-alt' ></i>
+              twitter:<i class='bx bxl-twitter' ></i>
+              linkdlin:<i class='bx bxl-linkedin' ></i> */} -->
+          </ul>
+      </div>
+    </div>
+    <div class="last-footer-text container">
+      <div class="left-side">
+          <p>Copyright © 2024, <span>Green Leaf Studio</span></p>
+      </div>
+      <div class="right-side">
+          <p>privacy policy data policy</p>
+      </div>
+    </div>
+  </div>
+    <script>
+    const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+    const formData = new FormData(form);
+    e.preventDefault();
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    result.innerHTML = "Please wait..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = json.message;
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+        })
+        .then(function() {
+            form.reset();
+            setTimeout(() => {
+                result.style.display = "none";
+            }, 3000);
+        });
+});
+</script>
+  
+</body>
+    
+</html>

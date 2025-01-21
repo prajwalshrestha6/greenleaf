@@ -1,0 +1,155 @@
+
+.banner
+{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(102, 194, 49, 0.2);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 05px;
+    position: sticky;
+}
+.banner-text
+{
+    text-align: center;
+    max-width: 800px;
+}
+.First-text
+{
+    font-size: 20px;
+    position: absolute;
+    top: 282px;
+    left: 120px;
+    color: #66C231;
+}
+.Middle-text
+{
+    font-size: 70px;
+    position: absolute;
+    top: 270px;
+    left: 120px;
+    font-weight: 500;
+    color: #66C231;
+}
+.Last-text
+{
+    font-size: 20px;
+    position: absolute;
+    top: 345px;
+   left: 455px;
+   color: #66C231;
+}
+.class_who {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 42px;
+    padding-bottom: 40px;
+    position: relative;
+    right: 20px;
+    letter-spacing: 2px;
+}
+.class_who p
+{
+    font-size: 14px;
+}
+.border_last
+{
+    border-bottom: 1.5px solid #66C231;
+    position: absolute;
+    right: 543px;
+    left: 498px;
+    top: 689px;
+}
+.border_last1
+{
+    border-bottom: 1.5px solid #66C231;
+    position: absolute;
+    right: 348px;
+    left: 309px;
+    top: 1324px;
+}
+.first_bg
+{
+    background: #66C231;
+    opacity: 60%;
+    width: 91%;
+    height: 245px;
+    margin-left: 49px;
+    padding: 5px;
+    color: #fff;
+    /* position: absolute;
+    left: 374px; */
+    
+}
+.second_bg
+{
+    background: #66C231;
+    opacity: 60%;
+    width: 91%;
+    color: #fff;
+    height: 245px;
+    margin-left: 49px;
+    padding: 5px;
+    margin-top: 10px;
+    /* position: absolute; */
+    
+}
+
+.animated{
+    height: 450px;
+    width: 500px;
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 80px;
+}
+
+.whoare{
+    height: 750px;
+    width: 700px;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 235px;s
+}
+@media (max-width:1321px){
+    .First-text {  
+        top: 230px;
+    }
+    .Middle-text
+    {
+        top: 225px;
+    }
+    .Last-text
+    {
+        top: 350px;
+        right: 240px;
+    }
+  }
+@media (max-width:1200px){
+   
+    .First-text
+{
+    font-size: 20px;
+    position: absolute;
+    top: 190px;
+    left: 255px;
+}
+.Middle-text
+{
+    font-size: 100px;
+    position: absolute;
+    top: 175px;
+    left: 258px;
+}
+.Last-text
+{
+    font-size: 20px;
+    position: absolute;
+    top: 280px;
+    right: 300px;
+}
+  }
